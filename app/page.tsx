@@ -10,7 +10,10 @@ export default function Home() {
     <main className="flex flex-col items-center justify-between p-24">
       <h1>Hello World</h1>
       <Button>Click me</Button>
-      {tasks?.map(({ _id, text }) => <div key={_id}>{text}</div>)}      
+      <div>
+        <p>Tasks</p>
+          {tasks?.map(({ _id, text }) => <p key={_id}>{JSON.stringify(text)}</p>)} 
+      </div>     
     </main>
   );
 }
