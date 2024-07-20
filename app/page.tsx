@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { signInAction } from "@/actions/auth-actions";
 
 export default function Home() {
-  const tasks = useQuery(api.tasks.get);
+  // const tasks = useQuery(api.tasks.get);
   return (
     <main className="flex flex-col items-center justify-between p-24">
       <h1>Hello World</h1>

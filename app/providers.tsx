@@ -7,6 +7,12 @@ import { ReactNode } from "react";
 
 const convex = new ConvexReactClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
-export function Providers({ children, session }: { children: ReactNode, session: Session | null }) {
-  return <SessionProvider session={session}><ConvexProvider client={convex}>{children}</ConvexProvider></SessionProvider>;
+export default function Providers({ children, session }: { children: ReactNode, session: Session | null }) {
+  return (
+  <SessionProvider session={session}>
+    <ConvexProvider client={convex}>
+      {children}
+    </ConvexProvider>
+  </SessionProvider>
+  );
 }
