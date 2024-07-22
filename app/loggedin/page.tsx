@@ -5,11 +5,13 @@ import { api } from "@/convex/_generated/api";
 import { Button } from "@/components/ui/button";
 import { signInAction } from "@/actions/auth-actions";
 import UserProfile from "@/components/navigation/userprofile";
+import Sidebar from "@/components/navigation/sidebar";
 
 export default function Home() {
   const tasks = useQuery(api.tasks.get);
   return (
-    <main className="flex flex-col items-center justify-between p-24">
+    <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
+      <Sidebar />
       <h1>Logged In</h1>
       
       <UserProfile />
@@ -19,6 +21,6 @@ export default function Home() {
           {tasks?.map(({ _id, text }) => <p key={_id}>{JSON.stringify(text)}</p>)} 
       </div>
          
-    </main>
+    </div>
   );
 }
