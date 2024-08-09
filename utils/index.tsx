@@ -24,3 +24,6 @@ export const primaryNavigationItems = [
         icon: <Grid2X2 className="w-4 h-4" />
     },
 ];
+
+export const GET_STARTED_PROJECT_ID = 'k97fkkwvfmfkjknvdp5z4ygkg96ycnd1';
+// LABEL_ID = 'k57780kfxc0kxb0zcgeyjw7xs16yd4sh'
