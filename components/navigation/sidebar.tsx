@@ -53,7 +53,11 @@ export default function SideBar() {
     // Effect hook to update navigation items when project list changes
     useEffect(() => {
         if (projectList) {
-            const projectItems = renderItems(projectList);
+            // const projectItems = renderItems(projectList);
+            const projectItems = renderItems(projectList).map(item => ({
+                ...item,
+                id: item.id ?? "defaultId", // Provide a default value if id is undefined
+            }));
             const items = [...primaryNavigationItems, ...projectItems];
             setNavItems(items);
         }
