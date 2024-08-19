@@ -1,5 +1,5 @@
 import { defineSchema, defineTable } from "convex/server";
-import { Validator, v } from "convex/values";
+import { v, Validator } from "convex/values";
 
 // The users, accounts, sessions and verificationTokens tables are modeled
 // from https://authjs.dev/getting-started/adapters#models
@@ -23,7 +23,7 @@ export const accountSchema = {
     v.literal("email"),
     v.literal("oidc"),
     v.literal("oauth"),
-    v.literal("webauthn"),
+    v.literal("webauthn")
   ),
   provider: v.string(),
   providerAccountId: v.string(),
@@ -63,7 +63,7 @@ const authTables = {
     .index("userId", ["userId"]),
   verificationTokens: defineTable(verificationTokenSchema).index(
     "identifierToken",
-    ["identifier", "token"],
+    ["identifier", "token"]
   ),
   authenticators: defineTable(authenticatorSchema)
     .index("userId", ["userId"])

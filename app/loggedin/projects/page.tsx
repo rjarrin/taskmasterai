@@ -1,15 +1,15 @@
+import ProjectList from "@/components/containers/projects";
 import MobileNav from "@/components/navigation/mobilenav";
 import SideBar from "@/components/navigation/sidebar";
-import TodoList from "@/components/todos/todolist";
 
-export default function Home() {
+export default function Projects() {
     return (
         <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
             <SideBar />
             <div className="flex flex-col">
                 <MobileNav />
                 <main className="flex flex-1 flex-col gap-4 p-4 lg:px-8">
-                    <TodoList />
+                    <ProjectList />
                 </main>
             </div>
         </div>
