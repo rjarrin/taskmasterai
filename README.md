@@ -28,3 +28,5 @@ Built with the Next.js 14 App Router, Convex, React, Next.js Auth V5 i.e. Auth.j
 - 🎁 ...much more
 
 ## Getting started
+
+Login via the [TaskMaster AI website]("https://taskmasterai-cyan.vercel.app") to begin. Simply use the Plus buttons to create new projects, tasks, and subtasks, and the Circle buttons to complete them. If you are unsure if there are any tasks or subtasks remaining for a specific project, use the 'Suggest Missing Items with AI' button to use Google's Gemini AI and have items added to your list!
